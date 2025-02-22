@@ -19,18 +19,18 @@ As a person who has been working in the IT field since a young age, I believe th
 
 <div align="left">
   <a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/">
-    <img src="images/logo.png" alt="Logo" width="90" height="90">
+    <img src="1. images/logo.png" alt="Logo" width="90" height="90">
   </a>
   
   <a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/">
-    <img src="images/logo_1.png" alt="Logo" width="90" height="90">
+    <img src="1. images/logo_1.png" alt="Logo" width="90" height="90">
   </a>
   <a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/">
-    <img src="images/logo_2.png" alt="Logo" width="90" height="90">
+    <img src="1. images/logo_2.png" alt="Logo" width="90" height="90">
   </a>
   </a>
   <a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/">
-    <img src="images/logo_3.png" alt="Logo" width="90" height="90">
+    <img src="1. images/logo_3.png" alt="Logo" width="90" height="90">
   </a>
 </div>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
