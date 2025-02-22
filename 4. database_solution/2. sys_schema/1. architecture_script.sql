@@ -3,7 +3,7 @@
 ALTER SESSION SET CONTAINER = CDB$ROOT;
 
 --CREATE CDB$ROOT TABLESPACE bookstore_tablespace
---delete if exists this tablespace;				                                                          ()	            - SYSTEM - READ WRITE
+--delete if exists this tablespace;				                                                        
 DROP TABLESPACE bookstore_tablespace INCLUDING CONTENTS AND DATAFILES;
 --create tablespace
 CREATE TABLESPACE bookstore_tablespace
@@ -28,7 +28,7 @@ ALTER PLUGGABLE DATABASE bookstore_db OPEN;
 --CREATE BOOKSTORE_DB TABLESPACE bookstore_db_tablespace
 --connect to bookstore_db session
 ALTER SESSION SET CONTAINER = bookstore_db;
---delete if exists this tablespace;				                                                          ()	            - SYSTEM - READ WRITE
+--delete if exists this tablespace;				                                                         
 DROP TABLESPACE bookstore_db_tablespace INCLUDING CONTENTS AND DATAFILES;
 --create tablespace
 CREATE TABLESPACE bookstore_db_tablespace
@@ -130,7 +130,7 @@ ALTER PLUGGABLE DATABASE bookstore_dw OPEN;
 --CREATE BOOKSTORE_DW TABLESPACE bookstore_dw_tablespace
 --connect to bookstore_dw session
 ALTER SESSION SET CONTAINER = bookstore_dw;
---delete if exists this tablespace;				                                                          ()	            - SYSTEM - READ WRITE
+--delete if exists this tablespace;				                                                         
 DROP TABLESPACE bookstore_dw_tablespace INCLUDING CONTENTS AND DATAFILES;
 --create tablespace
 CREATE TABLESPACE bookstore_dw_tablespace
@@ -233,7 +233,7 @@ ALTER PLUGGABLE DATABASE exposure_db OPEN;
 --CREATE EXPOSURE_DB TABLESPACE exposure_db_tablespace
 --connect to bookstore_dw session
 ALTER SESSION SET CONTAINER = exposure_db;
---delete if exists this tablespace;				                                                          ()	            - SYSTEM - READ WRITE
+--delete if exists this tablespace;				                                                        
 DROP TABLESPACE exposure_db_tablespace INCLUDING CONTENTS AND DATAFILES;
 --create tablespace
 CREATE TABLESPACE exposure_db_tablespace
