@@ -18,18 +18,18 @@ This is a repository project that we can find all database design you need. Mayb
 As a person who has been working in the IT field since a young age, I believe that there is a limited number of types of database management systems that you should study to be able to say that you can handle any other existing database management system.
 
 <div align="left">
-  <a href="https://github.com/ProcopieGabi0112/1-Database-Design-Patterns/">
+  <a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/">
     <img src="images/logo.png" alt="Logo" width="90" height="90">
   </a>
   
-  <a href="https://github.com/ProcopieGabi0112/1-Database-Design-Patterns/">
+  <a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/">
     <img src="images/logo_1.png" alt="Logo" width="90" height="90">
   </a>
-  <a href="https://github.com/ProcopieGabi0112/1-Database-Design-Patterns/">
+  <a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/">
     <img src="images/logo_2.png" alt="Logo" width="90" height="90">
   </a>
   </a>
-  <a href="https://github.com/ProcopieGabi0112/1-Database-Design-Patterns/">
+  <a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/">
     <img src="images/logo_3.png" alt="Logo" width="90" height="90">
   </a>
 </div>
@@ -95,7 +95,7 @@ Don't forget to give the project a star! Thanks again!
 
 ### Top contributors:
 
-<a href="https://github.com/ProcopieGabi0112/1-Database-Design-Patterns/graphs/contributors">
+<a href="https://github.com/ProcopieGabi0112/db_design_oracle_bookstore/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=othneildrew/Best-README-Template" alt="contrib.rocks image" />
 </a>
 
@@ -112,7 +112,7 @@ Distributed under the Unlicense License. See `LICENSE.txt` for more information.
 Procopie Gabi - procopiegabi@gmail.com
 
 Project Link: 
-[[https://github.com/ProcopieGabi0112/1-Database-Design-Patterns](https://github.com/ProcopieGabi0112/1-Database-Design-Patterns)]
+[[https://github.com/ProcopieGabi0112/db_design_oracle_bookstore](https://github.com/ProcopieGabi0112/db_design_oracle_bookstore)]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
