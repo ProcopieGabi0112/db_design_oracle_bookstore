@@ -1,0 +1,12 @@
+--Task_1-- 
+"create_region_table"
+1. creare tabela region / adaugare comentarii tabela
+region_id NUMBER "The primary key of region table"
+region_name VARCHAR2(50) "The name of the region"
+creation_date TIMESTAMP "Tehnical Column - date when the row was inserted"
+update_date TIMESTAMP "Tehnical Column - date when the row was updated"
+2. adaugare constrangeri 
+PK region_id,
+NN region_name,
+DFT creation_date,
+DFT update_date
