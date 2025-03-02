@@ -112,7 +112,7 @@ COMMENT ON COLUMN "&schema_name"."LOCATION".apartament_number IS 'The apartament
 COMMENT ON COLUMN "&schema_name"."LOCATION".postal_code IS 'The postal_code of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".city IS 'The city of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".state_province IS 'The state province of the location';
-COMMENT ON COLUMN "&schema_name"."LOCATION".country_id IS 'The foreign key from region table';
+COMMENT ON COLUMN "&schema_name"."LOCATION".country_id IS 'The foreign key from country table';
 COMMENT ON COLUMN "&schema_name"."LOCATION".publisher_id IS 'The foreign key from publisher table';
 COMMENT ON COLUMN "&schema_name"."LOCATION".creation_date IS 'Tehnical Column - date when the row was inserted';
 COMMENT ON COLUMN "&schema_name"."LOCATION".update_date IS 'Tehnical Column - date when the row was updated';
