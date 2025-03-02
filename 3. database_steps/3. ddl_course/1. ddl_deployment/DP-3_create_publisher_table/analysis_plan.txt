@@ -1,0 +1,24 @@
+--Task_3---- 
+"create_publisher_table"
+
+1. creare tabela publisher / adaugare comentarii tabela
+publisher_id NUMBER "The primary key of publisher table"
+name VARCHAR2(200) "The name of the publisher"
+email VARCHAR2(70) "The email of the publisher"
+phone VARCHAR2(20) "The phone of the publisher"
+website VARCHAR2(100) "The website of the publisher"
+founded_year VARCHAR2(4) "The founded year of publisher"
+status VARCHAR2(20) "The status of publisher"
+notes VARCHAR2(200) "The notes about the publisher"
+description VARCHAR2(250) "The description of publisher"
+rating NUMBER(3,1) "The rating of publisher"
+creation_date TIMESTAMP "Tehnical Column - date when the row was inserted"
+update_date TIMESTAMP "Tehnical Column - date when the row was updated"
+
+2. adaugare constrangeri 
+PK publisher_id,
+NN name,
+NN founded_year
+DFT status 'activ'
+DFT creation_date,
+DFT update_date
