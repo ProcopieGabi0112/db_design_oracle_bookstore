@@ -77,7 +77,6 @@ COMMENT ON COLUMN "&schema_name"."PUBLISHER".description IS 'The description of 
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".rating IS 'The rating of the publisher';
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".creation_date IS 'Tehnical Column - date when the row was inserted';
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".update_date IS 'Tehnical Column - date when the row was updated';
-
 --contrangere de tip primary key pe publisher_id
 ALTER TABLE "&schema_name"."PUBLISHER" ADD CONSTRAINT publisher_id_pk PRIMARY KEY (publisher_id);
 COMMIT;
@@ -88,20 +87,21 @@ DROP TABLE "&schema_name"."LOCATION" CASCADE CONSTRAINTS;
 -- cream tabela LOCATION
 CREATE TABLE "&schema_name"."LOCATION" (
 location_id NUMBER,
-street_name VARCHAR2(100) CONSTRAINT location_name_nn NOT NULL,
-street_number VARCHAR2(50),
+street_name VARCHAR2(100) CONSTRAINT location_street_name_nn NOT NULL,
+street_number VARCHAR2(50) CONSTRAINT location_street_number_nn NOT NULL,
 block VARCHAR2(10),
 building_entrance VARCHAR2(30),
 floor_number NUMBER(3),
 apartament_number NUMBER(4),
-postal_code VARCHAR2(15) CONSTRAINT postal_code_nn NOT NULL,
-city VARCHAR2(100) CONSTRAINT city_nn NOT NULL,
+postal_code VARCHAR2(15) CONSTRAINT location_postal_code_nn NOT NULL,
+city VARCHAR2(100) CONSTRAINT location_city_nn NOT NULL,
 state_province VARCHAR2(50),
-country_id NUMBER CONSTRAINT country_id_nn NOT NULL,
+country_id NUMBER CONSTRAINT location_country_id_nn NOT NULL,
 publisher_id NUMBER,
 creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
+--adaugam comentariile coloanelor de pe tabela location
 COMMENT ON COLUMN "&schema_name"."LOCATION".location_id IS 'The primary key of location table';
 COMMENT ON COLUMN "&schema_name"."LOCATION".street_name IS 'The street name of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".street_number IS 'The street number of the location';
@@ -111,19 +111,18 @@ COMMENT ON COLUMN "&schema_name"."LOCATION".floor_number IS 'The floor number of
 COMMENT ON COLUMN "&schema_name"."LOCATION".apartament_number IS 'The apartament number of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".postal_code IS 'The postal_code of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".city IS 'The city of the location';
-COMMENT ON COLUMN "&schema_name"."LOCATION".state_province IS 'The state_provinceof the location';
+COMMENT ON COLUMN "&schema_name"."LOCATION".state_province IS 'The state province of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".country_id IS 'The foreign key from region table';
-COMMENT ON COLUMN "&schema_name"."LOCATION".publisher_id IS 'The foreign key from region table';
+COMMENT ON COLUMN "&schema_name"."LOCATION".publisher_id IS 'The foreign key from publisher table';
 COMMENT ON COLUMN "&schema_name"."LOCATION".creation_date IS 'Tehnical Column - date when the row was inserted';
 COMMENT ON COLUMN "&schema_name"."LOCATION".update_date IS 'Tehnical Column - date when the row was updated';
 --adaugare primary key LOCATION_id 
 ALTER TABLE "&schema_name"."LOCATION" ADD CONSTRAINT location_id_pk PRIMARY KEY (location_id);
-
 --adaugare foreign key on delete CASCADE 
-ALTER TABLE "&schema_name"."LOCATION" ADD CONSTRAINT country_id_fk FOREIGN KEY (country_id)
+ALTER TABLE "&schema_name"."LOCATION" ADD CONSTRAINT country_country_id_fk FOREIGN KEY (country_id)
 REFERENCES "&schema_name"."COUNTRY"(country_id)
 ON DELETE CASCADE;
-ALTER TABLE "&schema_name"."LOCATION" ADD CONSTRAINT publisher_id_fk FOREIGN KEY (publisher_id)
+ALTER TABLE "&schema_name"."LOCATION" ADD CONSTRAINT publisher_publisher_id_fk FOREIGN KEY (publisher_id)
 REFERENCES "&schema_name"."PUBLISHER"(publisher_id)
 ON DELETE CASCADE;
 COMMIT;
