@@ -45,7 +45,6 @@ AND UPPER(table_name) LIKE '%PUBLISHER%';
 --PUBLISHER_ID_PK		                                    P	PUBLISHER_ID_PK 	ENABLED	02-MAR-25
 
 --verificare constrangere de tip NULL, DEFAULT
-SELECT * FROM DB_IN_OWNER.PUBLISHER;
 INSERT INTO DB_IN_OWNER.PUBLISHER(publisher_id,name,founded_year)
 VALUES (1,null,1998);
 INSERT INTO DB_IN_OWNER.PUBLISHER(publisher_id,name,founded_year)
