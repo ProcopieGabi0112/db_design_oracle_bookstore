@@ -97,7 +97,7 @@ postal_code VARCHAR2(15) CONSTRAINT location_postal_code_nn NOT NULL,
 city VARCHAR2(100) CONSTRAINT location_city_nn NOT NULL,
 state_province VARCHAR2(50),
 country_id NUMBER CONSTRAINT location_country_id_nn NOT NULL,
-publisher_id NUMBER CONSTRAINT location_publisher_id_nn NOT NULL,
+publisher_id NUMBER,
 creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
