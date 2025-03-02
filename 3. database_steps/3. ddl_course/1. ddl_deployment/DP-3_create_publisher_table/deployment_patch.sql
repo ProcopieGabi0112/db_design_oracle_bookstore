@@ -1,9 +1,9 @@
--- CREATE PUBLISHER TABLE
-
 DEFINE schema_name = "DB_IN_OWNER";
 
+-- CREATE PUBLISHER TABLE
+--stergere tabel daca exista
 DROP TABLE "&schema_name"."PUBLISHER";
-
+--creare tabela PUBLISHER
 CREATE TABLE "&schema_name"."PUBLISHER" (
 publisher_id NUMBER,
 name VARCHAR2(200) CONSTRAINT publisher_name_nn NOT NULL,
