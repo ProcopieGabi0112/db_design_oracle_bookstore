@@ -1,0 +1,16 @@
+--Task_2---- 
+"create_country_table"
+
+1. creare tabela country / adaugare comentarii tabela
+country_id NUMBER "The primary key of country table"
+country_name VARCHAR2(50) "The name of the country"
+region_id NUMBER "The foreign key from region table"
+creation_date TIMESTAMP "Tehnical Column - date when the row was inserted"
+update_date TIMESTAMP "Tehnical Column - date when the row was updated"
+
+2. adaugare constrangeri 
+PK country_id,
+NN country_name,
+NN, FKD region_id,
+DFT creation_date,
+DFT update_date
