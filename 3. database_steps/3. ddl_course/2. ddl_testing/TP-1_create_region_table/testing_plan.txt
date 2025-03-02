@@ -1,0 +1,8 @@
+----------
+--Task_1-- "create_region_table"
+----------
+PLAN TESTARE
+1. verificare existenta tabela;
+2. verificare structura tabela;
+3. verificare comentarii coloane adaugate;
+4. verificare constrangeri adaugate pe coloane;

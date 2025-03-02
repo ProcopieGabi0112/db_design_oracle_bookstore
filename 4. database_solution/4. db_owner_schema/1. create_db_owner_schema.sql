@@ -1,6 +1,6 @@
 -- vom defini variabila schema_name pe care o vom folosi pentru a seta schema tuturor obiectelor pe care le vom crea
 -- vom folosi variabila prin intermediul &schema_name(referinta)
-DEFINE schema_name = "DB_IN_OWNER";
+DEFINE schema_name = "DB_OWNER";
 
 -- CREATE REGION TABLE
 -- verificam daca tabela exista
