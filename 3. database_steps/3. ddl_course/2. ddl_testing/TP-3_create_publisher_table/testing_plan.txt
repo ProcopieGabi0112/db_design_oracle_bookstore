@@ -5,7 +5,6 @@ PLAN TESTARE
 
 1. verificare existenta tabela;
 2. verificare structura tabela;
-
 publisher_id NUMBER "The primary key of publisher table"
 name VARCHAR2(200) "The name of the publisher"
 email VARCHAR2(70) "The email of the publisher"
@@ -18,10 +17,8 @@ description VARCHAR2(250) "The description of publisher"
 rating NUMBER(3,1) "The rating of publisher"
 creation_date TIMESTAMP "Tehnical Column - date when the row was inserted"
 update_date TIMESTAMP "Tehnical Column - date when the row was updated"
-
 3. verificare comentarii coloane adaugate;
 4. verificare constrangeri simple adaugate pe coloane;
-
 PK publisher_id,
 NN name,
 NN founded_year
