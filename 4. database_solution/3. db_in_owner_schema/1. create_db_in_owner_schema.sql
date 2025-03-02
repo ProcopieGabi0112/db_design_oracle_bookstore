@@ -46,11 +46,9 @@ ON DELETE CASCADE;
 COMMIT;
 
 -- CREATE PUBLISHER TABLE
-
-DEFINE schema_name = "DB_IN_OWNER";
-
+-- verificam daca tabela exista
 DROP TABLE "&schema_name"."PUBLISHER";
-
+-- cream tabela PUBLISHER
 CREATE TABLE "&schema_name"."PUBLISHER" (
 publisher_id NUMBER,
 name VARCHAR2(200) CONSTRAINT publisher_name_nn NOT NULL,
@@ -65,7 +63,7 @@ rating NUMBER(3,1),
 creation_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 update_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
-
+--comentariile pe tabela publisher
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".publisher_id IS 'The primary key of publisher table';
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".name IS 'The name of the publisher';
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".email IS 'The email of the publisher';
@@ -78,10 +76,9 @@ COMMENT ON COLUMN "&schema_name"."PUBLISHER".description IS 'The description of 
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".rating IS 'The rating of the publisher';
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".creation_date IS 'Tehnical Column - date when the row was inserted';
 COMMENT ON COLUMN "&schema_name"."PUBLISHER".update_date IS 'Tehnical Column - date when the row was updated';
-
+--adaugam cheia primara pe coloana publisher_id
 ALTER TABLE "&schema_name"."PUBLISHER" ADD CONSTRAINT publisher_id_pk PRIMARY KEY (publisher_id);
 COMMIT;
-
 
 -- CREATE LOCATION TABLE
 -- verificam daca tabela exista
