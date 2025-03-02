@@ -34,7 +34,7 @@ WHERE table_name = 'LOCATION';
 --APARTAMENT_NUMBER	The apartament number of the location
 --POSTAL_CODE		The postal_code of the location
 --CITY				The city of the location
---STATE_PROVINCE	The state_provinceof the location
+--STATE_PROVINCE	The state province of the location
 --COUNTRY_ID		The foreign key from region table
 --PUBLISHER_ID		The foreign key from region table
 --CREATION_DATE		Tehnical Column - date when the row was inserted
@@ -53,44 +53,36 @@ AND UPPER(table_name) LIKE '%LOCATION%';
 --LOCATION_NAME_NN	"STREET_NAME" IS NOT NULL	C		            ENABLED	02-MAR-25
 --LOCATION_ID_PK		                        P	LOCATION_ID_PK	ENABLED	02-MAR-25
 
---verificam constrangerea NULL
+--verificam constrangerea NULL / DEFAULT
 INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
 VALUES (NULL,NULL,NULL,NULL,NULL,NULL);
 INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
 VALUES (101,'Linistei','27','061012','Bucuresti','1');
-INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
-
+SELECT * FROM DB_IN_OWNER.LOCATION;
 
 -- 5. verifica constrangere de tip foreign key on delete cascade;
--- 5.1. insereaza in tabela region 2 inregistrari cu doua regiuni.
-VALUES (102,'Principal Str.','72','601120','Bruxelle','2');
+-- 5.1. insereaza in tabela country 2 inregistrari cu doua tari.
+INSERT INTO DB_IN_OWNER.COUNTRY(country_id,country_name,region_id) 
+VALUES (1,'Romania',1); --verifica daca exista region_id = 1;
+INSERT INTO DB_IN_OWNER.COUNTRY(country_id,country_name,region_id) 
+VALUES (2,'Bulgaria',1); --verifica daca exista region_id = 1;
+-- 5.2. vom insera 4 inregistrari in tabela location. primele doua inregistrari
+--      vor avea country_id-ul=1. celelalte 2 inregistrari vor avea country_id -ul = 2;
+INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
+VALUES (102,'Principal Str.','72','601120','Bruxelle',2);
+INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
+VALUES (103,'Cernisoara','1','061001','Bucuresti',1);
 SELECT * FROM DB_IN_OWNER.LOCATION;
 INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
-VALUES (103,'Cernisoara','1','061001','Bucuresti','1');
--- 5.2. vom insera 4 inregistrari in tabela location. primele doua inregistrari
---      vor avea country_id-ul=10. celelalte 2 inregistrari vor avea location_id-ul=(6 si 7)
+VALUES (106,'Linistei','27','061012','Bucuresti',1);
 INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
-VALUES (101,'Linistei','27','061012','Bucuresti','10');
-INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
-VALUES (102,'Cernisoara','1','061001','Bucuresti','10');
-INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
-VALUES (105,'Picadilly Circus','5','071001','London','3');
-INSERT INTO DB_IN_OWNER.LOCATION(location_id,street_name,street_number,postal_code,city,country_id)
-VALUES (105,'Principal','75B','091012','Paris','2');
---101	Linistei	        27					061012	Bucuresti		1		02-MAR-25 05.18.21.367000000 PM	02-MAR-25 05.18.21.367000000 PM
---102	Principal Str.	    72					601120	Bruxelle		2		02-MAR-25 05.19.01.667000000 PM	02-MAR-25 05.19.01.667000000 PM
---103	Cernisoara	        1					061001	Bucuresti		1		02-MAR-25 05.29.14.390000000 PM	02-MAR-25 05.29.14.390000000 PM
---104	Picadilly Circus	5					071001	London		    3		02-MAR-25 05.29.38.283000000 PM	02-MAR-25 05.29.38.283000000 PM
---105	Principal	        75B					091012	Paris		    2		02-MAR-25 05.30.12.461000000 PM	02-MAR-25 05.30.12.461000000 PM
-
-
+VALUES (107,'Tuckson','134','061001','Varna',2);
 -- 5.3. sterge o inregistrare din tabela country.
 DELETE FROM DB_IN_OWNER.COUNTRY
 WHERE country_id=1;
 -- 5.4. verifica daca au fost sterse si cele doua inregistrari din tabela location
 --      care au fost legate de inregistrarea stearsa din tabela country. 
 SELECT * FROM LOCATION;
---102	Principal Str.	    72					601120	Bruxelle		2		02-MAR-25 05.19.01.667000000 PM	02-MAR-25 05.19.01.667000000 PM
---104	Picadilly Circus	5					071001	London		    3		02-MAR-25 05.29.38.283000000 PM	02-MAR-25 05.29.38.283000000 PM
---105	Principal	        75B					091012	Paris		    2		02-MAR-25 05.30.12.461000000 PM	02-MAR-25 05.30.12.461000000 PM
+--ar trebui ca cele doua inregistrari din tabela location care aveau country_id-ul = 1 
+--sa fie sterse;
 COMMIT;
