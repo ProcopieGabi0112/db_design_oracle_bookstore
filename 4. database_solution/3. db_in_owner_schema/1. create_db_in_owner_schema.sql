@@ -109,7 +109,7 @@ COMMENT ON COLUMN "&schema_name"."LOCATION".block IS 'The block of the location'
 COMMENT ON COLUMN "&schema_name"."LOCATION".building_entrance IS 'The building entrance of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".floor_number IS 'The floor number of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".apartament_number IS 'The apartament number of the location';
-COMMENT ON COLUMN "&schema_name"."LOCATION".postal_code IS 'The postal_code of the location';
+COMMENT ON COLUMN "&schema_name"."LOCATION".postal_code IS 'The postal code of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".city IS 'The city of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".state_province IS 'The state province of the location';
 COMMENT ON COLUMN "&schema_name"."LOCATION".country_id IS 'The foreign key from country table';
