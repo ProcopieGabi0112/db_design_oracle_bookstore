@@ -8,10 +8,7 @@ PLAN TESTARE
 3. verificare comentarii coloane adaugate;
 4. verificare constrangeri simple adaugate pe coloane;
 5. verifica constrangere de tip foreign key on delete cascade;
-   5.1. insereaza in tabela location 2 inregistrari cu doua regiuni.
-   5.2. insereaza in tabela country 4 inregistrari dintre care 2 dintre ele 
-        sa fie "legate" de aceeasi inregistrare din tabela region si restul din country 
-        sa fie legate de restul inregistrarilor din tabela region.
-   5.3. sterge o inregistrare din tabela region.
-   5.4. verifica daca au fost sterse si cele doua inregistrari din tabela country 
-        care au fost legate de inregistrarea stearsa din tabela region.   
+   5.1. insereaza in tabela location 2 inregistrari cu doua tari.
+   5.2. insereaza in tabela location 4 inregistrari dintre care 2 dintre ele sa fie "legate" de aceeasi inregistrare din tabela country si restul din location sa fie legate de restul inregistrarilor din tabela country.
+   5.3. sterge o inregistrare din tabela country.
+   5.4. verifica daca au fost sterse si cele doua inregistrari din tabela location care au fost legate de inregistrarea stearsa din tabela country.   
