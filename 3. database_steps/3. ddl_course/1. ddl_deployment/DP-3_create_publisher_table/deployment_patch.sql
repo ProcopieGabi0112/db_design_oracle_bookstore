@@ -1,3 +1,5 @@
+-- CREATE PUBLISHER TABLE
+
 DEFINE schema_name = "DB_IN_OWNER";
 
 DROP TABLE "&schema_name"."PUBLISHER";

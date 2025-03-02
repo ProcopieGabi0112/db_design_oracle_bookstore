@@ -45,6 +45,8 @@ REFERENCES "&schema_name"."REGION"(region_id)
 ON DELETE CASCADE;
 COMMIT;
 
+-- CREATE PUBLISHER TABLE
+
 DEFINE schema_name = "DB_IN_OWNER";
 
 DROP TABLE "&schema_name"."PUBLISHER";
