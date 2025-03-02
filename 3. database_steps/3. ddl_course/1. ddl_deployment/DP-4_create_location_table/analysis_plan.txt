@@ -24,6 +24,6 @@ NN street_number,
 NN postal_code,
 NN city,
 NN, FKD country_id,
-FKD publisher_id_id,
+FKD publisher_id,
 DFT creation_date,
 DFT update_date
