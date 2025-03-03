@@ -1,0 +1,39 @@
+----------
+--Task_3-- "create_publisher_table"
+----------
+PLAN TESTARE
+
+1. verificare existenta tabela;
+2. verificare structura tabela;
+
+publisher_id NUMBER "The primary key of publisher table"
+name VARCHAR2(200) "The name of the publisher"
+email VARCHAR2(70) "The email of the publisher"
+phone VARCHAR2(20) "The phone of the publisher"
+website VARCHAR2(100) "The website of the publisher"
+founded_year VARCHAR2(4) "The founded year of publisher"
+status VARCHAR2(20) "The status of publisher"
+notes VARCHAR2(200) "The notes about the publisher"
+description VARCHAR2(250) "The description of publisher"
+rating NUMBER(3,1) "The rating of publisher"
+creation_date TIMESTAMP "Tehnical Column - date when the row was inserted"
+update_date TIMESTAMP "Tehnical Column - date when the row was updated"
+
+3. verificare comentarii coloane adaugate;
+4. verificare constrangeri simple adaugate pe coloane;
+
+PK publisher_id,
+NN name,
+NN founded_year
+DFT status 'activ'
+DFT creation_date,
+DFT update_date
+
+5. verificare trigger pentru update
+   5.1. inserare in tabela o inregistrare;
+   5.2. realizeaza un update pe inregistrarea respectiva;
+   5.3. verifica daca valoarea de pe update_date a fost modificata;
+6. verifica daca fluxul realizat de trigger este in regula;
+   6.1. dau truncate la tabela ca sa elimin inregistrarile din tabela
+   6.2. insereaza 5 inregistrari in tabel folosind doar coloana country_name,region_id;
+   6.3. verifica daca pe coloana countr_id_id sunt valori de la 1 la 5;
